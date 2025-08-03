@@ -78,7 +78,7 @@ public class MaterialGradientDrawer : MaterialPropertyDrawer {
 					}
 
 					if (textureAsset.width != resolution) {
-						textureAsset.Resize(resolution, 1);
+						textureAsset.Reinitialize(resolution, 1);
 					}
 
 					textureAsset.name = fullAssetName;
@@ -147,7 +147,7 @@ public class MaterialGradientDrawer : MaterialPropertyDrawer {
 			}
 
 			if (textureAsset.width != resolution) {
-				textureAsset.Resize(resolution, 1);
+				textureAsset.Reinitialize(resolution, 1);
 			}
 
 			string fullAssetName = textureName + Encode(currentGradient);
