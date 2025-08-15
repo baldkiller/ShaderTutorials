@@ -81,7 +81,7 @@ public class ColorMetaballsEditor : Editor {
 			EditorGUI.BeginChangeCheck();
 			
 			Handles.color = Color.gray;
-			var fmh_84_70_638898513889046273 = Quaternion.identity; Vector3 pos = Handles.FreeMoveHandle(metaballTarget.positions[i], 0.03f, Vector3.zero, Handles.DotHandleCap);
+			Vector3 pos = Handles.FreeMoveHandle(metaballTarget.positions[i], Quaternion.identity, 0.03f, Vector3.zero, Handles.DotHandleCap);
 			if (EditorGUI.EndChangeCheck())
 			{
 				Undo.RecordObject(target, "Move point " + i);
